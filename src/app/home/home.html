@@ -1,8 +1,10 @@
-<div>
+<div class="row">
 
-  <span x-large>Your Content Here</span>
+  <div>
+  <button class="button" (click)="loadSpecies()">Load endangered species list</button>
 
- <button (click)="loadTweets()">press</button>
-
-
+  <ul>
+    <li *ngFor="#animal of endangeredSpecies">{{animal}}</li>
+  </ul>
+  </div>
 </div>

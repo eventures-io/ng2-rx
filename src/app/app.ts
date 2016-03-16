@@ -33,9 +33,8 @@ import {JSONP_PROVIDERS, Jsonp} from "angular2/http";
   `],
   template: `
     <header>
-      <width>
-        <h1>Hello {{ name }}</h1>
-        <ul>
+      <nav class="row">
+        <ul class="menu">
           <li router-active>
             <a [routerLink]=" ['Index'] ">Index</a>
           </li>
@@ -46,19 +45,12 @@ import {JSONP_PROVIDERS, Jsonp} from "angular2/http";
             <a [routerLink]=" ['About'] ">About</a>
           </li>
         </ul>
-      </width>
+      </nav>
     </header>
 
     <main>
       <router-outlet></router-outlet>
     </main>
-
-    <footer>
-      WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a>
-      <div>
-        <img [src]="angularclassLogo" width="10%">
-      </div>
-    </footer>
   `
 })
 @RouteConfig([
@@ -68,17 +60,9 @@ import {JSONP_PROVIDERS, Jsonp} from "angular2/http";
   { path: '/about', name: 'About', loader: () => require('es6-promise!./about/about')('About') },
 ])
 export class App {
-  angularclassLogo = 'assets/img/angularclass-avatar.png';
-  name = 'Angular 2 Webpack Starter';
-  url = 'https://twitter.com/AngularClass';
+
   constructor() {
   }
 }
 
-/*
- * Please review the https://github.com/AngularClass/angular2-examples/ repo for
- * more angular app examples that you may copy/paste
- * (The examples may not be updated as quickly. Please open an issue on github for us to update it)
- * For help or questions please contact us at @AngularClass on twitter
- * or our chat on Slack at https://AngularClass.com/slack-join
- */
+
