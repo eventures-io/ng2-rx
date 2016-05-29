@@ -36,11 +36,11 @@ import {JSONP_PROVIDERS, Jsonp} from "angular2/http";
       <nav class="row">
         <ul class="menu">
           <li router-active>
-            <a [routerLink]=" ['Index'] ">Index</a>
+            <a [routerLink]=" ['Index'] ">Home</a>
           </li>
-          <li router-active>
-            <a [routerLink]=" ['Home'] ">Home</a>
-          </li>
+          <!--<li router-active>-->
+            <!--<a [routerLink]=" ['Home'] ">Home</a>-->
+          <!--</li>-->
           <li router-active>
             <a [routerLink]=" ['About'] ">About</a>
           </li>
@@ -55,7 +55,7 @@ import {JSONP_PROVIDERS, Jsonp} from "angular2/http";
 })
 @RouteConfig([
   { path: '/',      name: 'Index', component: Home, useAsDefault: true },
-  { path: '/home',  name: 'Home',  component: Home },
+ // { path: '/home',  name: 'Home',  component: Home },
   // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
   { path: '/about', name: 'About', loader: () => require('es6-promise!./about/about')('About') },
 ])

@@ -3,8 +3,9 @@
   <div>
   <button class="button" (click)="loadSpecies()">Load endangered species list</button>
 
-  <ul>
-    <li *ngFor="#animal of endangeredSpecies">{{animal}}</li>
-  </ul>
+  <species-list [endangeredSpecies]="endangeredSpecies"></species-list>
+
+
+
   </div>
 </div>
